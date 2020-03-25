@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Glossary.IntegrationTests
 {
-  public static class FakeJwtTokensManager
+  public static class FakeJwtManager
   {
     public static string Issuer { get; } = Guid.NewGuid().ToString();
     public static string Audience { get; } = Guid.NewGuid().ToString();
@@ -16,7 +16,7 @@ namespace Glossary.IntegrationTests
     private static readonly RandomNumberGenerator generator = RandomNumberGenerator.Create();
     private static readonly byte[] key = new byte[32];
 
-    static FakeJwtTokensManager()
+    static FakeJwtManager()
     {
       generator.GetBytes(key);
       SecurityKey = new SymmetricSecurityKey(key) { KeyId = Guid.NewGuid().ToString() };

@@ -87,7 +87,7 @@ namespace Glossary.IntegrationTests
         definition = "An authentication process that considers multiple factors."
       }), Encoding.UTF8, "application/json");
 
-      var accessToken = FakeJwtTokensManager.GenerateJwtToken();
+      var accessToken = FakeJwtManager.GenerateJwtToken();
       request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
       // Act

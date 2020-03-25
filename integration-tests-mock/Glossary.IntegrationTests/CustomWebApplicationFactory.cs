@@ -17,9 +17,9 @@ namespace Glossary.IntegrationTests
               {
             options.TokenValidationParameters = new TokenValidationParameters()
             {
-              IssuerSigningKey = FakeJwtTokensManager.SecurityKey,
-              ValidIssuer = FakeJwtTokensManager.Issuer,
-              ValidAudience = FakeJwtTokensManager.Audience
+              IssuerSigningKey = FakeJwtManager.SecurityKey,
+              ValidIssuer = FakeJwtManager.Issuer,
+              ValidAudience = FakeJwtManager.Audience
             };
           });
       });
